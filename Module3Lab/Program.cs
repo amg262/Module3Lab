@@ -32,6 +32,8 @@ namespace Module3Lab
             double days = 0;
             double minutes = 0;
             double adventure = 0;
+            double tourist = 0;
+            double bigDay = 0;
             
             
             Console.Write("How many days will you be travelling?>");
@@ -39,8 +41,27 @@ namespace Module3Lab
             Console.Write("How many minutes per days will you use?>");
             Double.TryParse(Console.ReadLine(), out minutes);
 
-            
-            
+            adventure = AdventurerPass(days, minutes);
+            tourist = TouristPass(days, minutes);
+            bigDay = BigDayPass(days, minutes);
+
+            Console.WriteLine($"The Adventure Pass would cost you {adventure:C}");
+            Console.WriteLine($"The Tourist Pass would cost you {tourist:C}");
+            Console.WriteLine($"The Big Day Pass would cost you {bigDay:C}");
+
+            if (adventure > tourist && adventure > bigDay)
+            {
+                Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C}");
+            } else if (tourist > adventure && tourist > bigDay)
+            {
+                Console.WriteLine($"You should purchase The Tourist Pass for {tourist:C}");
+            } else if (bigDay > adventure && bigDay > tourist)
+            {
+                Console.WriteLine($"You should purchase The Big Day Pass for {bigDay:C}");
+            }
+
+
+
         }
     }
 }
