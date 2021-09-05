@@ -64,15 +64,50 @@ namespace Module3Lab
             Console.WriteLine($"The Tourist Pass would cost you {tourist:C}");
             Console.WriteLine($"The Big Day Pass would cost you {bigDay:C}");
 
-            if (adventure < tourist && adventure < bigDay)
+            if (adventure <= tourist && adventure <= bigDay)
             {
-                Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C}");
-            } else if (tourist < adventure && tourist < bigDay)
+                if (adventure == tourist)
+                {
+                    Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C} OR Tourist Pass for {tourist:C}");
+                } else if (adventure == bigDay)
+                {
+                    Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C} OR Big Day Pass for {bigDay:C}");
+                }
+                else
+                {
+                    Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C}");
+                }
+                
+            } else if (tourist <= adventure && tourist <= bigDay)
             {
-                Console.WriteLine($"You should purchase The Tourist Pass for {tourist:C}");
-            } else if (bigDay < adventure && bigDay < tourist)
+                
+                if (tourist == adventure)
+                {
+                    Console.WriteLine($"You should purchase The Tourist Pass for {tourist:C} OR Adventure Pass for {adventure:C}");
+                } else if (tourist == bigDay)
+                {
+                    Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C} OR Big Day Pass for {bigDay:C}");
+                }
+                else
+                {
+                    Console.WriteLine($"You should purchase The Tourist Pass for {tourist:C}");
+                }
+                
+            } else if (bigDay <= adventure && bigDay <= tourist)
             {
                 Console.WriteLine($"You should purchase The Big Day Pass for {bigDay:C}");
+                
+                if (bigDay == adventure)
+                {
+                    Console.WriteLine($"You should purchase The Big Day Pass for {bigDay:C} OR Adventure Pass for {adventure:C}");
+                } else if (bigDay == tourist)
+                {
+                    Console.WriteLine($"You should purchase The Big Day Pass for {adventure:C} OR Tourist Pass for {tourist:C}");
+                }
+                else
+                {
+                    Console.WriteLine($"You should purchase The Tourist Pass for {tourist:C}");
+                }
             }
 
 
