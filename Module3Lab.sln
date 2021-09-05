@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3Lab", "Module3Lab\Module3Lab.csproj", "{04BE61D3-4B3E-4F3E-845E-69171CA55704}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04BE61D3-4B3E-4F3E-845E-69171CA55704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BE61D3-4B3E-4F3E-845E-69171CA55704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BE61D3-4B3E-4F3E-845E-69171CA55704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BE61D3-4B3E-4F3E-845E-69171CA55704}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
