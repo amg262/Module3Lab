@@ -16,14 +16,29 @@ namespace Module3Lab
         {
             double costday = 0;
             double costMin = 0.20;
-            return minutes * costMin;
+            
+            double total = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                total += minutes * costMin;
+            }
+
+            return total;
         }
         
         static double AdventurerPass(double days, double minutes)
         {
             double costday = 3.0;
             double costMin = 0.10;
-            return (costday * days) + (costMin * minutes);
+            double total = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                total += minutes * costMin;
+            }
+
+            total += days * costday;
+            
+            return total;
         }
         
         
@@ -49,13 +64,13 @@ namespace Module3Lab
             Console.WriteLine($"The Tourist Pass would cost you {tourist:C}");
             Console.WriteLine($"The Big Day Pass would cost you {bigDay:C}");
 
-            if (adventure > tourist && adventure > bigDay)
+            if (adventure < tourist && adventure < bigDay)
             {
                 Console.WriteLine($"You should purchase The Adventure Pass for {adventure:C}");
-            } else if (tourist > adventure && tourist > bigDay)
+            } else if (tourist < adventure && tourist < bigDay)
             {
                 Console.WriteLine($"You should purchase The Tourist Pass for {tourist:C}");
-            } else if (bigDay > adventure && bigDay > tourist)
+            } else if (bigDay < adventure && bigDay < tourist)
             {
                 Console.WriteLine($"You should purchase The Big Day Pass for {bigDay:C}");
             }
